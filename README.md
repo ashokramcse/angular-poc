@@ -29,9 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Setup Firebase
 
-Login to your gmail.
-Go to [Firebase Console] (https://console.firebase.google.com/u/0/)
-Click on Add Project
-Enter project name & country and click on Create Project
-Click on "Add Firebase to your web app" link
-Copy the details from the popup to environment.ts
+1. Login to your gmail.
+2. Go to [Firebase Console](https://console.firebase.google.com/u/0/)
+3. Click on Add Project
+4. Enter project name & country and click on Create Project
+5. Click on "Add Firebase to your web app" link
+6. Copy the details from the popup to environment.ts
