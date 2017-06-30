@@ -15,7 +15,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Configure Firebase DB
-1. Go to https://console.firebase.google.com/u/0/                        
+1. Go to Firebase Console https://console.firebase.google.com/
 2. Click on Add Project                        
 3. Enter project name & country and click on Create Project                        
 4. Click on "Add Firebase to your web app" link                        
