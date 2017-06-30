@@ -1,0 +1,67 @@
+  <div class="main">
+    <tabset>
+      <tab heading="Employee Form">
+        <br/>
+        <div class="form-group">
+          <label>Name</label><input type="text" #newname [(ngModel)]="emp.name" placeholder="" /><br/>
+          <label>Age</label><input type="number" #newsize [(ngModel)]="emp.age" placeholder="" /><br/>
+          
+          <label>Gender</label>
+              <input type="radio" name="gender" #male (change)="gender(male.checked)"/> Male
+              <input type="radio" name="gender" #female (change)="gender(male.checked)"/> Female
+          <br/>
+
+          <label>Department</label>
+          <select id="dept" [(ngModel)]="emp.dept">
+            <option>Accounts</option>
+            <option>Product</option>
+            <option>Support</option>
+            <option>Administration</option>
+          </select>
+          <br/>
+          <label>Employee Benefits</label>
+            <input type="checkbox" name="benefits" value="PF" (change)="emp.benefits.pf = $event.target.checked" 
+            [ngModel]="emp.benefits.pf"/> PF
+            <input type="checkbox" name="benefits" value="Insurance" (change)="emp.benefits.insurance = $event.target.checked"
+            [ngModel]="emp.benefits.insurance"/> Insurance
+          <br/>
+          <label>Employee Description</label>
+            <textarea id="desc" class="form-control desc" rows="5" [(ngModel)]="emp.desc" ></textarea>
+            <br/>
+            <div class="center">
+              <button (click)="saveToServer()" type="button" class="btn btn-primary">Save</button>
+              <button (click)="clearForm()" type="button" class="btn btn-danger">Clear</button>
+            </div>
+            <div class="alert">
+              <div *ngFor="let alert of alerts">
+                <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" (onClose)="alertClosed()">{{ alert.msg }}</alert>
+              </div>
+            </div>
+        </div>
+      </tab>
+      <tab heading="Employee List">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Employee Benefits</th>
+                <th>Employee Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let emp of employees | async">
+              <td>{{ emp.name }}</td>
+              <td>{{ emp.age }}</td>
+              <td>{{ emp.gender }}</td>
+              <td>{{ emp.dept }}</td>
+              <td>{{getBenefit(emp.benefits)}}</td>
+              <td>{{ emp.desc }}</td>
+            </tr>
+            </tbody>
+        </table>
+      </tab>
+    </tabset>
+  </div>
