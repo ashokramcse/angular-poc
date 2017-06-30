@@ -1,6 +1,6 @@
-# Form
+# angular-poc
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.3. Please read the Prerequisites and installation steps from the Angular CLI link.
 
 ## Development server
 
@@ -26,3 +26,12 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Setup Firebase
+
+Login to your gmail.
+Go to [Firebase Console] (https://console.firebase.google.com/u/0/)
+Click on Add Project
+Enter project name & country and click on Create Project
+Click on "Add Firebase to your web app" link
+Copy the details from the popup to environment.ts
