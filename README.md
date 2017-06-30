@@ -22,3 +22,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 4. Enter project name & country and click on Create Project
 5. Click on "Add Firebase to your web app" link
 6. Copy the details from the popup to environment.ts
+
+## Run Project
+1. Run `npm install`
+2. Run `ng build` to build the project
+3. Copy dist folder to any webserver. And restart it.
